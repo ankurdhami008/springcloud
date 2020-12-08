@@ -9,3 +9,15 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/eureka
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+
+ribbon:
+  ReadTimeout: 60000
