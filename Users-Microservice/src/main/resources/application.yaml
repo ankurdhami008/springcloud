@@ -12,6 +12,11 @@ spring:
       enabled: true
       settings:
         web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
 
 eureka:
   client:
@@ -19,3 +24,10 @@ eureka:
       defaultZone: http://localhost:8010/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+gateway:
+  ip: 172.20.10.3
+
+token:
+  expirationTime: 864000000
+  secret: h3r2h283rbd89hgh293922hgh9h28932
